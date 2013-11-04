@@ -3,10 +3,11 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/clojurescript "0.0-1859"]]
   :plugins [[lein-cljsbuild "0.3.4"]]
+  :source-paths ["src-cljs" "src-js" "src-js2" "src"],
   :cljsbuild {:builds
-              {:dev {:source-paths ["src-cljs"],
+              {:dev {
                      :compiler {:pretty-print true,
-                                :libs ["src-js/libs"]
+                                :libs [""]
                                 :output-to "resources/compiled-app.js",
                                 :optimizations :whitespace},
                      :jar true}}
